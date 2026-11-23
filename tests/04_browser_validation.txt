@@ -1,0 +1,8 @@
+[PASS] 簡報初始頁載入
+[PASS] 下一頁按鈕
+[PASS] 鍵盤 End 前往最後一頁
+[PASS] 鍵盤箭頭回上一頁
+[PASS] 測驗答案顯示
+[PASS] Wiki 搜尋篩選
+[PASS] Wiki 無結果提示
+BROWSER_RESULT 7/7

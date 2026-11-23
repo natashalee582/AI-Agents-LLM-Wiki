@@ -1,0 +1,256 @@
+{
+  "name": "AI Agents 核心概念 LLM Wiki",
+  "edition": "2026-11-23",
+  "ingestion_mode": "5 篇官方網頁資料 → 人工擷取重點與 LLM 輔助摘要 → 五份可追溯來源筆記 → 本地 ingest 和索引",
+  "source_count": 5,
+  "sources": [
+    {
+      "id": "S01",
+      "org": "OpenAI",
+      "title": "A practical guide to building agents",
+      "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+      "theme": "模型、工具與指令；資料型、行動型及協作工具",
+      "notes": "Agent 不等於把 prompt 寫長；它需要明確任務、可用工具、執行邊界和品質檢查。工具可查詢資料或實際執行動作。",
+      "facts": [
+        "Agent 系統可由模型、工具與指令組成",
+        "工具可用來讀取資料、執行動作或協調其他 Agent",
+        "先用測試建立品質基準，再優化成本與延遲"
+      ],
+      "ingested_file": "sources/S01.md",
+      "sha256": "9930fcee58241ca1f193ae9519514d70f9d99c8af97da4dca9ca3905dc71bd54",
+      "character_count": 415
+    },
+    {
+      "id": "S02",
+      "org": "Anthropic",
+      "title": "Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "theme": "Workflow vs Agent；提示鏈、路由、平行化、評估與優化",
+      "notes": "預先固定步驟稱 Workflow；讓 LLM 動態決定下一步與工具較接近 Agent。選擇最簡單且能完成任務的架構。",
+      "facts": [
+        "Workflow 通常有預先定義的程式路徑",
+        "Agent 可動態決定處理流程與使用工具",
+        "先從簡單的解法開始，必要時再增加自治程度"
+      ],
+      "ingested_file": "sources/S02.md",
+      "sha256": "8d8b26dbe893b9ebe86c96e5873d5f5869b4e36f30fb832591660847a94d2943",
+      "character_count": 374
+    },
+    {
+      "id": "S03",
+      "org": "LangChain",
+      "title": "Agents documentation",
+      "url": "https://docs.langchain.com/oss/python/langchain/agents",
+      "theme": "Model–Tool–Observation 迴圈與 Middleware",
+      "notes": "模型會在需要時呼叫工具，讀取工具結果後再判定是否繼續；middleware 可以介入監控與限制執行。",
+      "facts": [
+        "Agent 常以模型與工具交替的迴圈運作",
+        "Tool output 是下一輪模型判斷的輸入",
+        "Middleware 可以改變執行前後的行為"
+      ],
+      "ingested_file": "sources/S03.md",
+      "sha256": "b896ee88c556d22b508cf3d4bcf2269dc88d860cd333b3ddaaafc97c87653554",
+      "character_count": 359
+    },
+    {
+      "id": "S04",
+      "org": "Google ADK",
+      "title": "Agents | Agent Development Kit",
+      "url": "https://adk.dev/agents/",
+      "theme": "Agent、工具、順序／平行／迴圈工作流程",
+      "notes": "ADK 把 Agent 視為可組合的執行單元，提供模板與 Graph 工作流程，實作中可安排 sequential、parallel 和 loop。",
+      "facts": [
+        "Agent 可包裝為可組合的執行單元",
+        "工作流程可安排順序、平行與迴圈型樣式",
+        "可使用圖式路徑組織多個工作節點"
+      ],
+      "ingested_file": "sources/S04.md",
+      "sha256": "bb7ead41bdf776cfa9b9df463a1f065363c640beebfa10dc16fed15345b066b8",
+      "character_count": 349
+    },
+    {
+      "id": "S05",
+      "org": "Microsoft Learn",
+      "title": "Microsoft Agent Framework overview",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "theme": "何時使用 Agent / Workflow；圖式編排與觀測",
+      "notes": "開放任務和需要自主規劃時可使用 Agent；已知順序、需可控性時適合 Workflow。Graph 能讓執行路徑與人工介入點明確。",
+      "facts": [
+        "開放式任務適合 Agent，固定步驟適合 Workflow",
+        "圖式工作流程用節點與路徑表達執行控制",
+        "必要時應支援人工審核和可觀測性"
+      ],
+      "ingested_file": "sources/S05.md",
+      "sha256": "0a9da3d5bc4e6f259868d8bc8c5b337f5343e38f3ddb25e77a390504deaf42f2",
+      "character_count": 396
+    }
+  ],
+  "concepts": [
+    {
+      "id": "C01",
+      "title": "AI Agent 是什麼？",
+      "level": "入門",
+      "summary": "AI Agent 是能圍繞目標選擇行動、使用工具並根據回饋調整的 AI 系統；不代表完全不需要人工。",
+      "points": [
+        "輸入：使用者的目標與約束",
+        "判斷：模型規劃目前最適合的下一步",
+        "行動：使用工具取得新資訊或完成操作",
+        "回饋：檢查結果，必要時重試或結束"
+      ],
+      "example": "請幫我規劃讀書：不只是回答建議，也能讀取行事曆、整理任務並再次檢查時段。",
+      "pitfall": "不是每個聊天機器人都是 Agent。",
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ]
+    },
+    {
+      "id": "C02",
+      "title": "LLM、Workflow、Agent 的差異",
+      "level": "入門",
+      "summary": "LLM 回覆單次請求；Workflow 按預設步驟執行；Agent 可在允許的範圍內動態決定下一步。",
+      "points": [
+        "LLM：通常一次問答或生成",
+        "Workflow：路徑固定，可預測、易測試",
+        "Agent：模型選擇下一步或工具，彈性較高",
+        "沒有「一定越自治越好」，以任務需求決定"
+      ],
+      "example": "摘要文章→翻譯→排版屬固定 Workflow；遇到不明內容自行決定查哪一份資料更偏向 Agent。",
+      "pitfall": "Workflow 包含 LLM 不等於一定是自主 Agent。",
+      "sources": [
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "id": "C03",
+      "title": "Agent 的三個核心元件",
+      "level": "基礎",
+      "summary": "Model 負責判斷、Tools 負責對外讀取或執行、Instructions 定義任務、界線與輸出規格。",
+      "points": [
+        "Model：理解上下文與選擇動作",
+        "Tools：搜尋、計算、查資料庫、寫入等",
+        "Instructions：角色、限制條件、停止條件",
+        "Guardrails／驗證：防止越權與格式錯誤"
+      ],
+      "example": "旅行助手：模型挑景點，工具查營業時間，指令限制預算和地區。",
+      "pitfall": "工具不能只給名稱，還需要清楚的用途與參數。",
+      "sources": [
+        "S01",
+        "S03"
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "Model–Tool–Observation Loop",
+      "level": "核心",
+      "summary": "當資訊不足時，模型選擇工具；工具回傳 Observation；模型根據新資料再決定下一步或輸出答案。",
+      "points": [
+        "Thought / Decision：選擇需要的動作",
+        "Tool Call：帶著參數呼叫適當工具",
+        "Observation：取得工具的回傳結果",
+        "Evaluate：達標則停止；未達標則重試或尋求人工協助"
+      ],
+      "example": "查詢課堂時程 → 找到資料 → 發現衝堂 → 改選其他時段 → 輸出可行版本。",
+      "pitfall": "不能無限制重試；需要步數上限與失敗退出條件。",
+      "sources": [
+        "S03",
+        "S01"
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "查詢 Wiki：先檢索，再回答",
+      "level": "核心",
+      "summary": "把外部來源整理成可追溯的知識項，回答或生成投影片時先找有關內容與來源，再做摘要。",
+      "points": [
+        "Ingest：整理每篇來源的重點與 URL",
+        "Index：以主題／標籤／關鍵字建立索引",
+        "Retrieve：依問題挑選相關知識項",
+        "Ground：只把有來源支持的事實放入簡報"
+      ],
+      "example": "產生「什麼是 Tool Use？」之前，先檢索 C03 和 C04，附上 S01、S03。",
+      "pitfall": "檢索不足或來源對錯頁，容易生成看似合理卻無根據的陳述。",
+      "sources": [
+        "S01",
+        "S03"
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "Workflow Graph 的三種形式",
+      "level": "進階",
+      "summary": "節點是任務、箭頭是依賴與條件；順序、分支、迴圈可組合，必要時加入平行處理。",
+      "points": [
+        "Sequential：完成前步才執行下一步",
+        "Routing：依條件決定不同路徑",
+        "Loop：檢查失敗回到先前步驟",
+        "Parallel：可獨立的工作同時進行"
+      ],
+      "example": "Wiki 生成：檢索來源 → 整理摘要 → 查核 →（不合格則返回檢索）→ 排版。",
+      "pitfall": "不應把每個簡單任務都拆成複雜的多 Agent。",
+      "sources": [
+        "S02",
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "id": "C07",
+      "title": "驗證與 Human-in-the-loop",
+      "level": "進階",
+      "summary": "讓系統在輸出前檢查來源、格式、任務限制和高風險動作；無法自動確認的部分交由人核對。",
+      "points": [
+        "來源查核：事實是否能對應原文與來源 ID",
+        "格式查核：簡報是否完整、可讀",
+        "安全查核：需要寫入資料時先確認權限",
+        "失敗回路：未通過則重新檢索／改寫"
+      ],
+      "example": "一頁簡報未附來源 → 驗證器阻擋發布 → 補上相符的 Wiki 引用 → 再次驗證。",
+      "pitfall": "單純「請 AI 自己檢查」不足以保證真實性；結構化規則與人工驗證很重要。",
+      "sources": [
+        "S01",
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "id": "C08",
+      "title": "實例：讀書規劃助理",
+      "level": "案例",
+      "summary": "將抽象的 Agent loop 放進有具體停止條件的學生日常任務。",
+      "points": [
+        "Goal：安排 3 天讀書進度",
+        "Retrieve：讀取科目、截止日期與既有時段",
+        "Plan：依優先順序分配時數",
+        "Check：檢查衝堂與時數，失敗就重排"
+      ],
+      "example": "衝堂發生→重新搜尋空檔→更新計畫；通過檢查才輸出。",
+      "pitfall": "此例是示意流程，沒有實際連動使用者行事曆。",
+      "sources": [
+        "S01",
+        "S03",
+        "S05"
+      ]
+    },
+    {
+      "id": "C09",
+      "title": "何時不該使用 Agent？",
+      "level": "反思",
+      "summary": "如果任務規則固定、可用程式函式直接解決，先用較簡單的 Workflow 或一般程式更可靠。",
+      "points": [
+        "固定算式：直接寫函式",
+        "穩定的步驟：順序 Workflow",
+        "資訊複雜且路徑不明：考慮 Agent",
+        "評估成本：可靠度、延遲、費用、可解釋性"
+      ],
+      "example": "計算課程學分不用 Agent；處理不同課表限制可能需要多步查詢與反覆修正。",
+      "pitfall": "Agent 能力更強不等於每項任務都應交給 Agent。",
+      "sources": [
+        "S02",
+        "S05"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+AI AGENTS WIKI PROJECT | QUALITY VALIDATION
+[PASS] 五篇以上已 ingest 的資料
+[PASS] 來源 URL 無重複
+[PASS] Wiki 至少八個知識節點
+[PASS] S01: 筆記檔案存在且 SHA-256 與 manifest 一致
+[PASS] S02: 筆記檔案存在且 SHA-256 與 manifest 一致
+[PASS] S03: 筆記檔案存在且 SHA-256 與 manifest 一致
+[PASS] S04: 筆記檔案存在且 SHA-256 與 manifest 一致
+[PASS] S05: 筆記檔案存在且 SHA-256 與 manifest 一致
+[PASS] C01: 知識點有有效來源
+[PASS] C02: 知識點有有效來源
+[PASS] C03: 知識點有有效來源
+[PASS] C04: 知識點有有效來源
+[PASS] C05: 知識點有有效來源
+[PASS] C06: 知識點有有效來源
+[PASS] C07: 知識點有有效來源
+[PASS] C08: 知識點有有效來源
+[PASS] C09: 知識點有有效來源
+[PASS] 三份入口 HTML 均存在
+[PASS] C01: Wiki 內容可透過錨點開啟
+[PASS] C02: Wiki 內容可透過錨點開啟
+[PASS] C03: Wiki 內容可透過錨點開啟
+[PASS] C04: Wiki 內容可透過錨點開啟
+[PASS] C05: Wiki 內容可透過錨點開啟
+[PASS] C06: Wiki 內容可透過錨點開啟
+[PASS] C07: Wiki 內容可透過錨點開啟
+[PASS] C08: Wiki 內容可透過錨點開啟
+[PASS] C09: Wiki 內容可透過錨點開啟
+[PASS] S01: Wiki 來源索引存在
+[PASS] S02: Wiki 來源索引存在
+[PASS] S03: Wiki 來源索引存在
+[PASS] S04: Wiki 來源索引存在
+[PASS] S05: Wiki 來源索引存在
+[PASS] 簡報頁數 = 12，實得 12
+[PASS] 第 01 頁: 知識節點引用有效
+[PASS] 第 01 頁: 已附上至少一個來源 ID
+[PASS] 第 01 頁: 來源 ID 有效
+[PASS] 第 01 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 01 頁: 頁腳來源可點回 Wiki
+[PASS] 第 02 頁: 知識節點引用有效
+[PASS] 第 02 頁: 已附上至少一個來源 ID
+[PASS] 第 02 頁: 來源 ID 有效
+[PASS] 第 02 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 02 頁: 頁腳來源可點回 Wiki
+[PASS] 第 03 頁: 知識節點引用有效
+[PASS] 第 03 頁: 已附上至少一個來源 ID
+[PASS] 第 03 頁: 來源 ID 有效
+[PASS] 第 03 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 03 頁: 頁腳來源可點回 Wiki
+[PASS] 第 04 頁: 知識節點引用有效
+[PASS] 第 04 頁: 已附上至少一個來源 ID
+[PASS] 第 04 頁: 來源 ID 有效
+[PASS] 第 04 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 04 頁: 頁腳來源可點回 Wiki
+[PASS] 第 05 頁: 知識節點引用有效
+[PASS] 第 05 頁: 已附上至少一個來源 ID
+[PASS] 第 05 頁: 來源 ID 有效
+[PASS] 第 05 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 05 頁: 頁腳來源可點回 Wiki
+[PASS] 第 06 頁: 知識節點引用有效
+[PASS] 第 06 頁: 已附上至少一個來源 ID
+[PASS] 第 06 頁: 來源 ID 有效
+[PASS] 第 06 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 06 頁: 頁腳來源可點回 Wiki
+[PASS] 第 07 頁: 知識節點引用有效
+[PASS] 第 07 頁: 已附上至少一個來源 ID
+[PASS] 第 07 頁: 來源 ID 有效
+[PASS] 第 07 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 07 頁: 頁腳來源可點回 Wiki
+[PASS] 第 08 頁: 知識節點引用有效
+[PASS] 第 08 頁: 已附上至少一個來源 ID
+[PASS] 第 08 頁: 來源 ID 有效
+[PASS] 第 08 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 08 頁: 頁腳來源可點回 Wiki
+[PASS] 第 09 頁: 知識節點引用有效
+[PASS] 第 09 頁: 已附上至少一個來源 ID
+[PASS] 第 09 頁: 來源 ID 有效
+[PASS] 第 09 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 09 頁: 頁腳來源可點回 Wiki
+[PASS] 第 10 頁: 知識節點引用有效
+[PASS] 第 10 頁: 來源 ID 有效
+[PASS] 第 10 頁: 頁腳來源可點回 Wiki
+[PASS] 第 11 頁: 知識節點引用有效
+[PASS] 第 11 頁: 已附上至少一個來源 ID
+[PASS] 第 11 頁: 來源 ID 有效
+[PASS] 第 11 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 11 頁: 頁腳來源可點回 Wiki
+[PASS] 第 12 頁: 知識節點引用有效
+[PASS] 第 12 頁: 已附上至少一個來源 ID
+[PASS] 第 12 頁: 來源 ID 有效
+[PASS] 第 12 頁: 簡報引用與 Wiki 知識來源完整一致
+[PASS] 第 12 頁: 頁腳來源可點回 Wiki
+[PASS] 簡報有前後頁控制
+[PASS] 簡報有互動小測驗
+[FAIL] 第 10 頁: 已附上至少一個來源 ID
+[FAIL] 第 10 頁: 簡報引用與 Wiki 知識來源完整一致
+
+RESULT | PASS=93 | FAIL=2 | SOURCES=5 | CONCEPTS=9 | SLIDES=12

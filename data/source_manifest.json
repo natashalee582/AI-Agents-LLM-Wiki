@@ -1,0 +1,82 @@
+[
+  {
+    "id": "S01",
+    "org": "OpenAI",
+    "title": "A practical guide to building agents",
+    "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+    "theme": "模型、工具與指令；資料型、行動型及協作工具",
+    "notes": "Agent 不等於把 prompt 寫長；它需要明確任務、可用工具、執行邊界和品質檢查。工具可查詢資料或實際執行動作。",
+    "facts": [
+      "Agent 系統可由模型、工具與指令組成",
+      "工具可用來讀取資料、執行動作或協調其他 Agent",
+      "先用測試建立品質基準，再優化成本與延遲"
+    ],
+    "ingested_file": "sources/S01.md",
+    "sha256": "9930fcee58241ca1f193ae9519514d70f9d99c8af97da4dca9ca3905dc71bd54",
+    "character_count": 415
+  },
+  {
+    "id": "S02",
+    "org": "Anthropic",
+    "title": "Building effective agents",
+    "url": "https://www.anthropic.com/research/building-effective-agents",
+    "theme": "Workflow vs Agent；提示鏈、路由、平行化、評估與優化",
+    "notes": "預先固定步驟稱 Workflow；讓 LLM 動態決定下一步與工具較接近 Agent。選擇最簡單且能完成任務的架構。",
+    "facts": [
+      "Workflow 通常有預先定義的程式路徑",
+      "Agent 可動態決定處理流程與使用工具",
+      "先從簡單的解法開始，必要時再增加自治程度"
+    ],
+    "ingested_file": "sources/S02.md",
+    "sha256": "8d8b26dbe893b9ebe86c96e5873d5f5869b4e36f30fb832591660847a94d2943",
+    "character_count": 374
+  },
+  {
+    "id": "S03",
+    "org": "LangChain",
+    "title": "Agents documentation",
+    "url": "https://docs.langchain.com/oss/python/langchain/agents",
+    "theme": "Model–Tool–Observation 迴圈與 Middleware",
+    "notes": "模型會在需要時呼叫工具，讀取工具結果後再判定是否繼續；middleware 可以介入監控與限制執行。",
+    "facts": [
+      "Agent 常以模型與工具交替的迴圈運作",
+      "Tool output 是下一輪模型判斷的輸入",
+      "Middleware 可以改變執行前後的行為"
+    ],
+    "ingested_file": "sources/S03.md",
+    "sha256": "b896ee88c556d22b508cf3d4bcf2269dc88d860cd333b3ddaaafc97c87653554",
+    "character_count": 359
+  },
+  {
+    "id": "S04",
+    "org": "Google ADK",
+    "title": "Agents | Agent Development Kit",
+    "url": "https://adk.dev/agents/",
+    "theme": "Agent、工具、順序／平行／迴圈工作流程",
+    "notes": "ADK 把 Agent 視為可組合的執行單元，提供模板與 Graph 工作流程，實作中可安排 sequential、parallel 和 loop。",
+    "facts": [
+      "Agent 可包裝為可組合的執行單元",
+      "工作流程可安排順序、平行與迴圈型樣式",
+      "可使用圖式路徑組織多個工作節點"
+    ],
+    "ingested_file": "sources/S04.md",
+    "sha256": "bb7ead41bdf776cfa9b9df463a1f065363c640beebfa10dc16fed15345b066b8",
+    "character_count": 349
+  },
+  {
+    "id": "S05",
+    "org": "Microsoft Learn",
+    "title": "Microsoft Agent Framework overview",
+    "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+    "theme": "何時使用 Agent / Workflow；圖式編排與觀測",
+    "notes": "開放任務和需要自主規劃時可使用 Agent；已知順序、需可控性時適合 Workflow。Graph 能讓執行路徑與人工介入點明確。",
+    "facts": [
+      "開放式任務適合 Agent，固定步驟適合 Workflow",
+      "圖式工作流程用節點與路徑表達執行控制",
+      "必要時應支援人工審核和可觀測性"
+    ],
+    "ingested_file": "sources/S05.md",
+    "sha256": "0a9da3d5bc4e6f259868d8bc8c5b337f5343e38f3ddb25e77a390504deaf42f2",
+    "character_count": 396
+  }
+]

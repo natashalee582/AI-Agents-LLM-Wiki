@@ -1,0 +1,149 @@
+[
+  {
+    "slide": 1,
+    "title": "AI Agents：從回答到完成任務",
+    "concept_ids": [
+      "C01"
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S03"
+    ]
+  },
+  {
+    "slide": 2,
+    "title": "你已經用過 LLM，但 Agent 多做了一件事",
+    "concept_ids": [
+      "C01",
+      "C08"
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S05"
+    ]
+  },
+  {
+    "slide": 3,
+    "title": "LLM、Workflow、Agent 有什麼不同？",
+    "concept_ids": [
+      "C02",
+      "C09"
+    ],
+    "source_ids": [
+      "S02",
+      "S05"
+    ]
+  },
+  {
+    "slide": 4,
+    "title": "設計 Agent 需要三個元件",
+    "concept_ids": [
+      "C03"
+    ],
+    "source_ids": [
+      "S01",
+      "S03"
+    ]
+  },
+  {
+    "slide": 5,
+    "title": "看懂 Agent Loop",
+    "concept_ids": [
+      "C04"
+    ],
+    "source_ids": [
+      "S01",
+      "S03"
+    ]
+  },
+  {
+    "slide": 6,
+    "title": "Tool Use 不只是一個搜尋按鈕",
+    "concept_ids": [
+      "C03",
+      "C04"
+    ],
+    "source_ids": [
+      "S01",
+      "S03"
+    ]
+  },
+  {
+    "slide": 7,
+    "title": "為什麼需要 LLM Wiki？",
+    "concept_ids": [
+      "C05"
+    ],
+    "source_ids": [
+      "S01",
+      "S03"
+    ]
+  },
+  {
+    "slide": 8,
+    "title": "Graph 讓流程更可控",
+    "concept_ids": [
+      "C06"
+    ],
+    "source_ids": [
+      "S02",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "slide": 9,
+    "title": "讀書規劃 Agent：從目標到可用結果",
+    "concept_ids": [
+      "C08"
+    ],
+    "source_ids": [
+      "S01",
+      "S03",
+      "S05"
+    ]
+  },
+  {
+    "slide": 10,
+    "title": "沒有驗證的 Agent 很難可靠",
+    "concept_ids": [
+      "C07"
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S05"
+    ]
+  },
+  {
+    "slide": 11,
+    "title": "你分得出 Workflow 和 Agent 嗎？",
+    "concept_ids": [
+      "C02"
+    ],
+    "source_ids": [
+      "S02",
+      "S05"
+    ]
+  },
+  {
+    "slide": 12,
+    "title": "記住這三句話",
+    "concept_ids": [
+      "C01",
+      "C04",
+      "C06",
+      "C07"
+    ],
+    "source_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  }
+]
