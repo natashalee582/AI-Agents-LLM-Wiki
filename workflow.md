@@ -1,7 +1,5 @@
 # AI Agents LLM Wiki → HTML 教學簡報：Workflow / Graph
 
-作業日期：2026-11-23
-
 ## 1. 主題與規劃（先討論，後生成）
 
 **主題**：AI Agents：從 LLM、Tool Use 到 Workflow Graph。
